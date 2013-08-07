@@ -14,9 +14,10 @@ import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.EActivity;
 import com.googlecode.androidannotations.annotations.ViewById;
 import com.googlecode.androidannotations.annotations.res.StringArrayRes;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 
 import java.util.ArrayList;
-
 @EActivity(R.layout.main)
 public class MainAppActivity extends SherlockActivity {
 
@@ -29,7 +30,15 @@ public class MainAppActivity extends SherlockActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        initImageLoader();
         getSupportActionBar().show();
+    }
+
+    private void initImageLoader() {
+        ImageLoaderConfiguration config = new ImageLoaderConfiguration
+                .Builder(getApplicationContext())
+                .build();
+        ImageLoader.getInstance().init(config);
     }
 
     @AfterViews
