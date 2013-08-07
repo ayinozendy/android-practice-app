@@ -12,6 +12,7 @@ import com.actionbarsherlock.app.SherlockActivity;
 import com.gamalinda.practice.R;
 import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.EActivity;
+import com.googlecode.androidannotations.annotations.ItemClick;
 import com.googlecode.androidannotations.annotations.ViewById;
 import com.googlecode.androidannotations.annotations.res.StringArrayRes;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -45,6 +46,18 @@ public class MainAppActivity extends SherlockActivity {
     void afterViews() {
         getSupportActionBar().show();
         leftDrawer.setAdapter(new DrawerNavigationListAdapter(this, things));
+    }
+
+    @ItemClick(resName = "left_drawer")
+    void list(int position) {
+        Toast.makeText(this, R.string.toast_test, 1500).show();
+        switch (position) {
+            case 0:
+                ImageViewActivity_.intent(this).start();
+                break;
+            default:
+                break;
+        }
     }
 
     private class DrawerNavigationListAdapter extends BaseAdapter {
