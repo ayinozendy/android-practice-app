@@ -46,6 +46,24 @@
             <version>${commons-lang.version}</version>
         </dependency>
         <dependency>
+            <groupId>com.google.android.gms</groupId>
+            <artifactId>google-play-services</artifactId>
+            <version>7</version>
+            <type>apklib</type>
+        </dependency>
+        <dependency>
+            <groupId>com.google.android.gms</groupId>
+            <artifactId>google-play-services</artifactId>
+            <version>7</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>com.google.android.maps</groupId>
+            <artifactId>maps</artifactId>
+            <version>18_r1</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
             <groupId>com.actionbarsherlock</groupId>
             <artifactId>actionbarsherlock</artifactId>
             <version>4.2.0</version>
