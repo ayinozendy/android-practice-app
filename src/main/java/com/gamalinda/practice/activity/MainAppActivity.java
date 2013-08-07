@@ -59,7 +59,7 @@ public class MainAppActivity extends SherlockActivity {
 
     @ItemClick(resName = "left_drawer")
     void list(int position) {
-        Toast.makeText(this, R.string.toast_test, 1500).show();
+        Toast.makeText(this, things[position], 1500).show();
         switch (position) {
             case 0:
                 ImageViewActivity_.intent(this).start();
