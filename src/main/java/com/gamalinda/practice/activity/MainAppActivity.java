@@ -2,12 +2,13 @@ package com.gamalinda.practice.activity;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.support.v4.widget.DrawerLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 import com.actionbarsherlock.app.SherlockActivity;
 import com.gamalinda.practice.R;
 import com.googlecode.androidannotations.annotations.AfterViews;
@@ -18,12 +19,14 @@ import com.googlecode.androidannotations.annotations.res.StringArrayRes;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 
-import java.util.ArrayList;
 @EActivity(R.layout.main)
 public class MainAppActivity extends SherlockActivity {
 
     @StringArrayRes
     String[] things;
+
+    @ViewById(R.id.drawer_layout)
+    DrawerLayout drawerLayout;
 
     @ViewById(R.id.left_drawer)
     android.widget.ListView leftDrawer;
@@ -46,6 +49,12 @@ public class MainAppActivity extends SherlockActivity {
     void afterViews() {
         getSupportActionBar().show();
         leftDrawer.setAdapter(new DrawerNavigationListAdapter(this, things));
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        drawerLayout.closeDrawer(leftDrawer);
     }
 
     @ItemClick(resName = "left_drawer")
