@@ -31,5 +31,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.ImageViewActivity_"/>
+        <activity android:name=".activity.MapViewActivity_"/>
     </application>
 </manifest>
