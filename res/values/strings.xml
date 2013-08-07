@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">MainAppActivity</string>
+    <string-array name="things">
+        <item>Phone</item>
+        <item>Banana</item>
+        <item>Kimchi</item>
+        <item>Cables</item>
+        <item>Magnets</item>
+    </string-array>
 </resources>
