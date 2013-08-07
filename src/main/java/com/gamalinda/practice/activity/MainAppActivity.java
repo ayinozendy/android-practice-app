@@ -64,6 +64,9 @@ public class MainAppActivity extends SherlockActivity {
             case 0:
                 ImageViewActivity_.intent(this).start();
                 break;
+            case 1:
+                MapViewActivity_.intent(this).start();
+                break;
             default:
                 break;
         }
