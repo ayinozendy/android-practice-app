@@ -21,6 +21,6 @@
               android:divider="@android:color/transparent"
               android:dividerHeight="0dp"
               android:cacheColorHint="#00000000"
-              android:background="#111"/>
+              android:background="#111111"/>
 </android.support.v4.widget.DrawerLayout>
 
