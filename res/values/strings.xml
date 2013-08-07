@@ -4,6 +4,7 @@
     <string name="android_logo_url">http://developer.android.com/images/brand/Android_Robot_200.png</string>
     <string-array name="things">
         <item>Show Picture</item>
+        <item>Map View</item>
         <item>Phone</item>
         <item>Banana</item>
         <item>Kimchi</item>
