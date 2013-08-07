@@ -1,7 +1,13 @@
 package com.gamalinda.practice.activity;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
+import android.widget.TextView;
 import com.actionbarsherlock.app.SherlockActivity;
 import com.gamalinda.practice.R;
 import com.googlecode.androidannotations.annotations.AfterViews;
@@ -29,7 +35,41 @@ public class MainAppActivity extends SherlockActivity {
     @AfterViews
     void afterViews() {
         getSupportActionBar().show();
-        leftDrawer.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, things));
+        leftDrawer.setAdapter(new DrawerNavigationListAdapter(this, things));
     }
 
+    private class DrawerNavigationListAdapter extends BaseAdapter {
+
+        private LayoutInflater layoutInflater;
+
+        String[] listOfThings;
+
+        public DrawerNavigationListAdapter(Context context, String[] listOfThings) {
+            layoutInflater = LayoutInflater.from(context);
+            this.listOfThings = listOfThings;
+        }
+
+        @Override
+        public int getCount() {
+            return listOfThings.length;
+        }
+
+        @Override
+        public Object getItem(int position) {
+            return listOfThings[position];
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return 0;
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            View view = this.layoutInflater.inflate(R.layout.drawer_item_layout, parent, false);
+            TextView textView = (TextView) view.findViewById(R.id.text);
+            textView.setText(listOfThings[position]);
+            return view;
+        }
+    }
 }
