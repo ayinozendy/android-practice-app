@@ -45,6 +45,12 @@
             <artifactId>commons-lang3</artifactId>
             <version>${commons-lang.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.actionbarsherlock</groupId>
+            <artifactId>actionbarsherlock</artifactId>
+            <version>4.2.0</version>
+            <type>apklib</type>
+        </dependency>
     </dependencies>
     <build>
         <defaultGoal>install</defaultGoal>
