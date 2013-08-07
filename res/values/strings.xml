@@ -15,5 +15,6 @@
         <item>Keys</item>
     </string-array>
     <string name="show_picture">Picture View</string>
+    <string name="show_map">Map View</string>
     <string name="toast_test">Toast!</string>
 </resources>
