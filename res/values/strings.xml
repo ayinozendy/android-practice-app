@@ -15,5 +15,5 @@
         <item>Keys</item>
     </string-array>
     <string name="show_picture">Picture View</string>
-    <string name="toast_test">Alert!</string>
+    <string name="toast_test">Toast!</string>
 </resources>
