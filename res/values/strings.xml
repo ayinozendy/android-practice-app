@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">MainAppActivity</string>
+    <string name="android_logo_url">http://developer.android.com/images/brand/Android_Robot_200.png</string>
     <string-array name="things">
         <item>Phone</item>
         <item>Banana</item>
@@ -12,4 +13,5 @@
         <item>Mouse</item>
         <item>Keys</item>
     </string-array>
+    <string name="show_picture">Picture View</string>
 </resources>
