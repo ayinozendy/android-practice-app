@@ -15,8 +15,6 @@ import org.springframework.core.io.FileSystemResource;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 
-import java.io.File;
-
 @EActivity(R.layout.upload_view)
 public class UploadViewActivity extends SherlockActivity {
 
