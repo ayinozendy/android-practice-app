@@ -70,6 +70,8 @@ public class MainAppActivity extends SherlockActivity {
             case 2:
                 TabNavigationActivity_.intent(this).start();
                 break;
+            case 3:
+                ShareViewActivity_.intent(this).start();
             default:
                 break;
         }
