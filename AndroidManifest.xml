@@ -32,5 +32,6 @@
         </activity>
         <activity android:name=".activity.ImageViewActivity_"/>
         <activity android:name=".activity.MapViewActivity_"/>
+        <activity android:name=".activity.TabNavigationActivity_"/>
     </application>
 </manifest>
