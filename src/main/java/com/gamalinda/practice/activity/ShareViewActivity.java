@@ -16,6 +16,7 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 public class ShareViewActivity extends SherlockActivity {
 
     private static final int SELECT_PHOTO = 100;
+    private static final String TEST_LINK = "";
 
     @ViewById(R.id.image)
     ImageView imageView;
@@ -57,6 +58,15 @@ public class ShareViewActivity extends SherlockActivity {
         Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
         photoPickerIntent.setType("image/*");
         startActivityForResult(photoPickerIntent, SELECT_PHOTO);
+    }
+
+    @Click
+    void link() {
+        Intent sendIntent = new Intent();
+        sendIntent.setAction(Intent.ACTION_SEND);
+        sendIntent.putExtra(Intent.EXTRA_TEXT, TEST_LINK);
+        sendIntent.setType("text/plain");
+        startActivity(sendIntent);
     }
 
     @Click
