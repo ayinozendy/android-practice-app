@@ -16,7 +16,7 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 public class ShareViewActivity extends SherlockActivity {
 
     private static final int SELECT_PHOTO = 100;
-    private static final String TEST_LINK = "";
+    private static final String TEST_LINK = "http://developer.android.com/index.html";
 
     @ViewById(R.id.image)
     ImageView imageView;
