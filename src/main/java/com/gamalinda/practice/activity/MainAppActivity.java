@@ -72,6 +72,8 @@ public class MainAppActivity extends SherlockActivity {
                 break;
             case 3:
                 ShareViewActivity_.intent(this).start();
+            case 4:
+                UploadViewActivity_.intent(this).start();
             default:
                 break;
         }
