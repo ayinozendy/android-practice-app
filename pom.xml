@@ -80,6 +80,11 @@
             <version>2.4.1</version>
             <type>apklib</type>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.android</groupId>
+            <artifactId>spring-android-rest-template</artifactId>
+            <version>1.0.1.RELEASE</version>
+        </dependency>
     </dependencies>
     <build>
         <defaultGoal>install</defaultGoal>
