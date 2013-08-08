@@ -85,6 +85,11 @@
             <artifactId>spring-android-rest-template</artifactId>
             <version>1.0.1.RELEASE</version>
         </dependency>
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-mapper-asl</artifactId>
+            <version>1.9.7</version>
+        </dependency>
     </dependencies>
     <build>
         <defaultGoal>install</defaultGoal>
