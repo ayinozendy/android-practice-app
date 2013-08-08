@@ -67,6 +67,9 @@ public class MainAppActivity extends SherlockActivity {
             case 1:
                 MapViewActivity_.intent(this).start();
                 break;
+            case 2:
+                TabNavigationActivity_.intent(this).start();
+                break;
             default:
                 break;
         }
