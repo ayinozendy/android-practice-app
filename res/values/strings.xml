@@ -5,6 +5,7 @@
     <string-array name="things">
         <item>Show Picture</item>
         <item>Map View</item>
+        <item>Tab View</item>
         <item>Phone</item>
         <item>Banana</item>
         <item>Kimchi</item>
@@ -17,5 +18,6 @@
     </string-array>
     <string name="show_picture">Picture View</string>
     <string name="show_map">Map View</string>
+    <string name="show_tabs">Tab View</string>
     <string name="toast_test">Toast!</string>
 </resources>
