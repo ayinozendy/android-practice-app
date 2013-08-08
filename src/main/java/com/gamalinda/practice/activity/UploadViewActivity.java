@@ -1,21 +1,27 @@
 package com.gamalinda.practice.activity;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.net.Uri;
+import android.provider.MediaStore;
 import android.widget.ImageView;
 import com.actionbarsherlock.app.SherlockActivity;
 import com.gamalinda.practice.R;
-import com.googlecode.androidannotations.annotations.AfterViews;
-import com.googlecode.androidannotations.annotations.Click;
-import com.googlecode.androidannotations.annotations.EActivity;
-import com.googlecode.androidannotations.annotations.ViewById;
+import com.gamalinda.practice.service.RestMethod;
+import com.googlecode.androidannotations.annotations.*;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
+import org.springframework.core.io.FileSystemResource;
+import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.util.MultiValueMap;
+
+import java.io.File;
 
 @EActivity(R.layout.upload_view)
 public class UploadViewActivity extends SherlockActivity {
 
     private static final int SELECT_PHOTO = 100;
+    private static final String URL = "http://127.0.0.1:3000/api/posts";
 
     @ViewById(R.id.image)
     ImageView imageView;
@@ -61,6 +67,22 @@ public class UploadViewActivity extends SherlockActivity {
 
     @Click
     void image() {
+        uploadImage();
+    }
 
+    @Background
+    void uploadImage() {
+        MultiValueMap<String, Object> parts = new LinkedMultiValueMap<String, Object>();
+        parts.add("post[image]", new FileSystemResource(getRealPathFromURI(imageUri)));
+        parts.add("post[title]", "TITLE");
+        RestMethod.uploadImage(URL, parts);
+    }
+
+    public String getRealPathFromURI(Uri contentUri) {
+        String[] proj = {MediaStore.Images.Media.DATA};
+        Cursor cursor = managedQuery(contentUri, proj, null, null, null);
+        int column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
+        cursor.moveToFirst();
+        return cursor.getString(column_index);
     }
 }
