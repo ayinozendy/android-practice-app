@@ -20,4 +20,10 @@
     <string name="show_map">Map View</string>
     <string name="show_tabs">Tab View</string>
     <string name="toast_test">Toast!</string>
+    <string-array name="tabs">
+        <item>Grizelda</item>
+        <item>Gwendolyn</item>
+        <item>Lizbeth</item>
+        <item>Grimrock</item>
+    </string-array>
 </resources>
