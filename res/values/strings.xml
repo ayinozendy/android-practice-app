@@ -6,6 +6,7 @@
         <item>Show Picture</item>
         <item>Map View</item>
         <item>Tab View</item>
+        <item>Share View</item>
         <item>Phone</item>
         <item>Banana</item>
         <item>Kimchi</item>
@@ -19,6 +20,7 @@
     <string name="show_picture">Picture View</string>
     <string name="show_map">Map View</string>
     <string name="show_tabs">Tab View</string>
+    <string name="show_share">Share View</string>
     <string name="toast_test">Toast!</string>
     <string-array name="tabs">
         <item>Grizelda</item>
@@ -26,4 +28,5 @@
         <item>Lizbeth</item>
         <item>Grimrock</item>
     </string-array>
+    <string name="fox">The quick brown fox jumped over the lazy dog over the river bank.</string>
 </resources>
