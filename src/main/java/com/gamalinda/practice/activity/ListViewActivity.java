@@ -7,6 +7,7 @@ import com.actionbarsherlock.app.SherlockActivity;
 import com.gamalinda.practice.R;
 import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.EActivity;
+import com.googlecode.androidannotations.annotations.ItemClick;
 import com.googlecode.androidannotations.annotations.ViewById;
 import com.googlecode.androidannotations.annotations.res.StringArrayRes;
 
@@ -28,5 +29,10 @@ public class ListViewActivity extends SherlockActivity {
     @AfterViews
     void afterViews() {
         listView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listOfThings));
+    }
+
+    @ItemClick(resName = "list_view")
+    void list(int position) {
+        ListViewDetailsPageActivity_.intent(this).text(listOfThings[position]).start();
     }
 }
