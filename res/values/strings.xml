@@ -9,15 +9,6 @@
         <item>Share View</item>
         <item>Upload View</item>
         <item>List View</item>
-        <item>Phone</item>
-        <item>Banana</item>
-        <item>Kimchi</item>
-        <item>Cables</item>
-        <item>Magnets</item>
-        <item>Manga</item>
-        <item>Cotton</item>
-        <item>Mouse</item>
-        <item>Keys</item>
     </string-array>
     <string name="show_picture">Picture View</string>
     <string name="show_map">Map View</string>
@@ -31,4 +22,15 @@
         <item>Grimrock</item>
     </string-array>
     <string name="fox">The quick brown fox jumped over the lazy dog over the river bank.</string>
+    <string-array name="list_things">
+        <item>Phone</item>
+        <item>Banana</item>
+        <item>Kimchi</item>
+        <item>Cables</item>
+        <item>Magnets</item>
+        <item>Manga</item>
+        <item>Cotton</item>
+        <item>Mouse</item>
+        <item>Keys</item>
+    </string-array>
 </resources>
