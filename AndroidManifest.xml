@@ -35,5 +35,6 @@
         <activity android:name=".activity.TabNavigationActivity_"/>
         <activity android:name=".activity.ShareViewActivity_"/>
         <activity android:name=".activity.UploadViewActivity_"/>
+        <activity android:name=".activity.ListViewActivity_"/>
     </application>
 </manifest>
