@@ -80,6 +80,10 @@ public class MainAppActivity extends SherlockActivity {
                 ListViewActivity_.intent(this).start();
             case 6:
                 ApiPostingTestActivity_.intent(this).start();
+                break;
+            case 7:
+                YouTubeVideoViewActivity_.intent(this).start();
+                break;
             default:
                 break;
         }
