@@ -78,6 +78,8 @@ public class MainAppActivity extends SherlockActivity {
                 break;
             case 5:
                 ListViewActivity_.intent(this).start();
+            case 6:
+                ApiPostingTestActivity_.intent(this).start();
             default:
                 break;
         }
