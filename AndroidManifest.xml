@@ -38,5 +38,6 @@
         <activity android:name=".activity.ListViewActivity_"/>
         <activity android:name=".activity.ListViewDetailsPageActivity_"/>
         <activity android:name=".activity.ApiPostingTestActivity_"/>
+        <activity android:name=".activity.YouTubeVideoViewActivity_"/>
     </application>
 </manifest>
