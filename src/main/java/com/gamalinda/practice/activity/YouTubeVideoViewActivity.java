@@ -10,8 +10,12 @@ import com.googlecode.androidannotations.annotations.EActivity;
 @EActivity(R.layout.youtbe_view)
 public class YouTubeVideoViewActivity extends SherlockActivity {
 
+    private String videoId = "r-qbDvNBg9w";
+
     @Click(R.id.show_video)
     void showVideo() {
-        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.youtube.com/watch?v=r-qbDvNBg9w")));
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("vnd.youtube:"+videoId));
+        intent.putExtra("VIDEO_ID", videoId);
+        startActivity(intent);
     }
 }
