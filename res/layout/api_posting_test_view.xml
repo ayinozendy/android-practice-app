@@ -4,5 +4,26 @@
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
-
+    <TextView android:id="@+id/open_gallery"
+              android:textSize="32sp"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center_horizontal"
+              android:text="Open Gallery"/>
+    <TextView android:id="@+id/take_picture"
+              android:textSize="32sp"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center_horizontal"
+              android:text="Take Picture"/>
+    <TextView android:id="@+id/post"
+              android:textSize="32sp"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center_horizontal"
+              android:text="Post"/>
+    <ImageView android:id="@+id/imageView"
+               android:contentDescription="The Image View"
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"/>
 </LinearLayout>
