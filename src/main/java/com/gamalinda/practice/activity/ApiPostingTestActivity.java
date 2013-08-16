@@ -1,8 +1,11 @@
 package com.gamalinda.practice.activity;
 
 import android.content.ContentResolver;
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
+import android.location.Criteria;
+import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
@@ -28,6 +31,9 @@ public class ApiPostingTestActivity extends SherlockActivity {
 
     private static final String URL = "http://10.10.1.231:3000/api/posts";
 
+    private static final long PHIL_LAT = (long) 11.8728;
+    private static final long PHIL_LONG = (long) 122.8613;
+
     @ViewById(R.id.image_view)
     ImageView imageView;
 
@@ -40,10 +46,22 @@ public class ApiPostingTestActivity extends SherlockActivity {
 
     private DisplayImageOptions options;
 
+    private LocationManager locationManager;
+
+    private String provider;
+
     @AfterViews
     void afterViews() {
         options = new DisplayImageOptions.Builder()
                 .build();
+
+        initLocationManager();
+    }
+
+    private void initLocationManager() {
+        locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        Criteria criteria = new Criteria();
+        provider = locationManager.getBestProvider(criteria, false);
     }
 
     @Override
@@ -105,8 +123,8 @@ public class ApiPostingTestActivity extends SherlockActivity {
         parts.add("post[image]", new FileSystemResource(getRealPathFromURI(imageUri)));
         parts.add("post[title]", "Android Title");
         parts.add("post[description]", "Android Description");
-        parts.add("post[longitude]", "122.8613");
-        parts.add("post[latitude]", "11.8728");
+        parts.add("post[longitude]", ""+locationManager.getLastKnownLocation(provider).getLongitude());
+        parts.add("post[latitude]", ""+locationManager.getLastKnownLocation(provider).getLatitude());
         RestMethod.uploadImage(URL, parts);
     }
 
