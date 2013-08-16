@@ -37,5 +37,6 @@
         <activity android:name=".activity.UploadViewActivity_"/>
         <activity android:name=".activity.ListViewActivity_"/>
         <activity android:name=".activity.ListViewDetailsPageActivity_"/>
+        <activity android:name=".activity.ApiPostingTestActivity_"/>
     </application>
 </manifest>
