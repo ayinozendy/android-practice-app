@@ -30,14 +30,14 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".activity.ImageViewActivity_"/>
-        <activity android:name=".activity.MapViewActivity_"/>
-        <activity android:name=".activity.TabNavigationActivity_"/>
-        <activity android:name=".activity.ShareViewActivity_"/>
-        <activity android:name=".activity.UploadViewActivity_"/>
-        <activity android:name=".activity.ListViewActivity_"/>
-        <activity android:name=".activity.ListViewDetailsPageActivity_"/>
-        <activity android:name=".activity.ApiPostingTestActivity_"/>
-        <activity android:name=".activity.YouTubeVideoViewActivity_"/>
+        <activity android:name=".activity.ImageViewActivity_" android:configChanges="orientation|keyboardHidden"/>
+        <activity android:name=".activity.MapViewActivity_" android:configChanges="orientation|keyboardHidden"/>
+        <activity android:name=".activity.TabNavigationActivity_" android:configChanges="orientation|keyboardHidden"/>
+        <activity android:name=".activity.ShareViewActivity_" android:configChanges="orientation|keyboardHidden"/>
+        <activity android:name=".activity.UploadViewActivity_" android:configChanges="orientation|keyboardHidden"/>
+        <activity android:name=".activity.ListViewActivity_" android:configChanges="orientation|keyboardHidden"/>
+        <activity android:name=".activity.ListViewDetailsPageActivity_" android:configChanges="orientation|keyboardHidden"/>
+        <activity android:name=".activity.ApiPostingTestActivity_" android:configChanges="orientation|keyboardHidden"/>
+        <activity android:name=".activity.YouTubeVideoViewActivity_" android:configChanges="orientation|keyboardHidden"/>
     </application>
 </manifest>
