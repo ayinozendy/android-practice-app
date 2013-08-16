@@ -10,6 +10,7 @@
         <item>Upload View</item>
         <item>List View</item>
         <item>API Post</item>
+        <item>Youtube View</item>
     </string-array>
     <string name="show_picture">Picture View</string>
     <string name="show_map">Map View</string>
